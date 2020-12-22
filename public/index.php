@@ -1,3 +1,3 @@
 <?php
 
-echo 123;
+require dirname(__DIR__) . '/vendor/autoload.php';
