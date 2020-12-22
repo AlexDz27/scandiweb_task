@@ -1,0 +1,10 @@
+{
+    "name": "alex/scandiweb",
+    "authors": [
+        {
+            "name": "Alex Dzyuba",
+            "email": "alexeydzyuba27@gmail.com"
+        }
+    ],
+    "require": {}
+}
