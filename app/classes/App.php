@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\Router\Router;
 use Error;
 
 class App
@@ -13,7 +14,8 @@ class App
 
   public function run()
   {
-    // router....
+    $router = new Router();
+    $router->handleRoute();
   }
 
   private function configure(string $mode)
