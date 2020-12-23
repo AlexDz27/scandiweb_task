@@ -1,8 +1,9 @@
 <?php
 
-namespace Framework\Router;
+namespace App\Router;
 
-class Router {
+class Router
+{
   public function __construct()
   {
     $uri = $_SERVER['REQUEST_URI'];
