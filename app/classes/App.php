@@ -11,6 +11,11 @@ class App
     $this->configure($mode);
   }
 
+  public function run()
+  {
+    // router....
+  }
+
   private function configure(string $mode)
   {
     if ($mode !== 'development' && $mode !== 'production') {
