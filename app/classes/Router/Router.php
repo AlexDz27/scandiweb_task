@@ -13,7 +13,7 @@ class Router
   
   public function __construct()
   {
-    $this->uri = $_SERVER['REQUEST_URI'];
+    $this->uri = $this->getUriWithoutParams();
 
     $this->loadRoutes();
   }
@@ -56,5 +56,12 @@ class Router
     $nameWithPhpExt = end($exploded);
 
     return explode('.', $nameWithPhpExt)[0];
+  }
+  
+  private function getUriWithoutParams(): string
+  {
+    $uri = $_SERVER['REQUEST_URI'];
+
+    return explode('?', $uri)[0];
   }
 }
