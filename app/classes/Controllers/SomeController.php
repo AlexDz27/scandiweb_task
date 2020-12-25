@@ -1,9 +1,11 @@
 <?php
 
-class SomeController
+use App\Controllers\AbstractController\AbstractController;
+
+class SomeController extends AbstractController
 {
   public function some()
   {
-    echo 'some controller';
+    echo $this->renderPage('Some Page', 'content/some');
   }
 }

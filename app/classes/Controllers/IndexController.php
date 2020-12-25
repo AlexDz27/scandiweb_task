@@ -1,9 +1,11 @@
 <?php
 
-class IndexController
+use App\Controllers\AbstractController\AbstractController;
+
+class IndexController extends AbstractController
 {
   public function index()
   {
-    echo 'index controller';
+    echo $this->renderPage('Index Page', 'content/index');
   }
 }
