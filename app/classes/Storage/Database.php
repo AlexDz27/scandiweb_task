@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Storage;
 
 use PDO;
 
@@ -8,12 +8,19 @@ class Database
 {
   private PDO $manager;
 
-  public function __construct($config)
+  public function __construct()
   {
-    $this->enableManager($config);
+    $this->enableManager();
   }
 
-  private function enableManager($config) {
+  public function getManager(): PDO
+  {
+    return $this->manager;
+  }
+
+  private function enableManager() {
+    $config = $GLOBALS['config']['database'];
+
     $connectionKey = "mysql:host=${config['host']};dbname=${config['db_name']};charset=${config['charset']}";
     $options = [
       PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
