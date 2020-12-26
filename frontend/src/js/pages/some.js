@@ -1,0 +1,1 @@
+console.log('script that must be only in Some page');
