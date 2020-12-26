@@ -19,7 +19,7 @@
           <li><?= $product->SKU; ?></li>
           <li><?= $product->name; ?></li>
           <li><?= $product->price; ?></li>
-          <li><?= $product->size; ?></li>
+          <li><?= $product->getInfo(); ?></li>
         </ul>
       </li>
     <?php endforeach; ?>
