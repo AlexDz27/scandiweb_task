@@ -1,6 +1,8 @@
-  <footer>
+  <footer class="footer container">
     <hr>
-    A footer
+    <p class="footer__text">
+      Scandiweb Test Assignment
+    </p>
   </footer>
   <script src="assets/js/index.min.js"></script>
 </body>

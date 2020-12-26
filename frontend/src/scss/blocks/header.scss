@@ -1,0 +1,17 @@
+@import '../global';
+
+.header {
+  margin-bottom: 50px;
+}
+
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  width: 170px;
+  display: flex;
+  justify-content: space-between;
+}

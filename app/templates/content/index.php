@@ -1,24 +1,31 @@
 <?php
-/** @var Product $products */
+use App\Models\Products\Description\AbstractProduct;
+/** @var AbstractProduct $products */
 ?>
 
-<header>
-  <h1>Product List</h1>
+<header class="header container">
+  <div class="header__wrapper">
+    <h1>Product List</h1>
 
-  <nav>
-    <a href="#">Add</a>
-    <button type="button">Mass Delete</button>
-  </nav>
+    <nav class="nav">
+      <a href="#">Add</a>
+      <button type="button">Mass Delete</button>
+    </nav>
+  </div>
+
+  <hr>
 </header>
 
-<main>
-  <ul>
+<main class="container">
+  <ul class="card-list">
     <?php foreach ($products as $product): ?>
-      <li>
-        <ul>
+      <li id="product" class="card">
+        <input id="checkbox" class="card__checkbox" type="checkbox">
+
+        <ul class="card__desc">
           <li><?= $product->SKU; ?></li>
           <li><?= $product->name; ?></li>
-          <li><?= $product->price; ?></li>
+          <li><?= $product->price; ?> $</li>
           <li><?= $product->getInfo(); ?></li>
         </ul>
       </li>

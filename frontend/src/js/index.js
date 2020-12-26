@@ -1,14 +1,8 @@
-import {SomeModule} from "./modules/SomeModule";
+const products = document.querySelectorAll('#product');
 
-const a = 123;
-console.log(a);
-
-const someFunc = () => 1;
-
-console.log(someFunc());
-
-const someModule = new SomeModule();
-
-someModule.test();
-
-console.log('asdasdasds');
+products.forEach((product) => {
+  product.addEventListener('click', () => {
+    const checkbox = product.querySelector('#checkbox');
+    checkbox.checked = !checkbox.checked;
+  })
+});
