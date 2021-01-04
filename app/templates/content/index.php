@@ -9,7 +9,7 @@ use App\Models\Products\Description\AbstractProduct;
 
     <nav class="nav">
       <a href="#">Add</a>
-      <button type="button">Mass Delete</button>
+      <button id="deleteBtn" type="button">Mass Delete</button>
     </nav>
   </div>
 
@@ -19,7 +19,7 @@ use App\Models\Products\Description\AbstractProduct;
 <main class="container">
   <ul class="card-list">
     <?php foreach ($products as $product): ?>
-      <li id="product" class="card">
+      <li id="product" data-list-id="<?= $product->id; ?>" class="card">
         <input id="checkbox" class="card__checkbox" type="checkbox">
 
         <ul class="card__desc">

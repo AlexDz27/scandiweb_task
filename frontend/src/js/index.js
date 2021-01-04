@@ -1,8 +1,9 @@
+import {ProductsWatcher} from "./modules/ProductsWatcher";
+
 const products = document.querySelectorAll('#product');
 
-products.forEach((product) => {
-  product.addEventListener('click', () => {
-    const checkbox = product.querySelector('#checkbox');
-    checkbox.checked = !checkbox.checked;
-  })
-});
+const productsWatcher = new ProductsWatcher();
+productsWatcher.watch(products);
+
+const deleteBtn = document.querySelector('#deleteBtn');
+deleteBtn.addEventListener('click', productsWatcher.deleteSelected.bind(productsWatcher));

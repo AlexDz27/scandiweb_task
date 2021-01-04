@@ -30,8 +30,7 @@ class Router
     }
 
     if (!$isRouteMatched) {
-      http_response_code(404);
-      echo '404 Not Found';
+      $this->resolveRoute(new NotFoundRoute());
     }
   }
 
