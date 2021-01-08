@@ -4,6 +4,13 @@
       Scandiweb Test Assignment
     </p>
   </footer>
-  <script src="/assets/js/index.min.js"></script>
+  <?php
+  use App\Helpers\AssetManager;
+
+  AssetManager::load(
+    ['/product/list'],
+    ['<script src="/assets/js/index.min.js"></script>']
+  );
+  ?>
 </body>
 </html>

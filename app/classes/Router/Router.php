@@ -14,6 +14,7 @@ class Router
   public function __construct()
   {
     $this->uri = $this->getUriWithoutParams();
+    $GLOBALS['route_uri'] = $this->uri;
 
     $this->loadRoutes();
   }
