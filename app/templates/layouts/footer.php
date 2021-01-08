@@ -4,6 +4,6 @@
       Scandiweb Test Assignment
     </p>
   </footer>
-  <script src="<?= $GLOBALS['assets_url'] ?>/js/index.min.js"></script>
+  <script src="/assets/js/index.min.js"></script>
 </body>
 </html>

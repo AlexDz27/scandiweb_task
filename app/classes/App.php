@@ -25,11 +25,11 @@ class App
     }
 
     if ($mode === 'development') {
-      $GLOBALS['config'] = require_once $GLOBALS['project_dir'] . '/config/config/config.development.php';
+      $GLOBALS['app_config'] = require_once $GLOBALS['project_dir'] . '/config/app_config/config.development.php';
     }
 
     if ($mode === 'production') {
-      $GLOBALS['config'] = require_once $GLOBALS['project_dir'] . '/config/config/config.production.php';
+      $GLOBALS['app_config'] = require_once $GLOBALS['project_dir'] . '/config/app_config/config.production.php';
     }
   }
 }

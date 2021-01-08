@@ -19,7 +19,7 @@ class Database
   }
 
   private function enableManager() {
-    $config = $GLOBALS['config']['database'];
+    $config = $GLOBALS['app_config']['database'];
 
     $connectionKey = "mysql:host=${config['host']};dbname=${config['db_name']};charset=${config['charset']}";
     $options = [

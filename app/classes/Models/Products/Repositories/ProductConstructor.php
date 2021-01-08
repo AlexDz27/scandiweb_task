@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Storage\Queries\Models\Product;
+namespace App\Models\Products\Repositories;
 
 use App\Models\Products\Description\AbstractProduct;
 use App\Models\Products\Book;

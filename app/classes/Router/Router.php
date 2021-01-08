@@ -4,7 +4,7 @@ namespace App\Router;
 
 class Router
 {
-  private $uri;
+  private string $uri;
 
   /**
    * @var Route[] $routes
